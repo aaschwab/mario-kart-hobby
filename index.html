@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Kart Racing</title>
+    <style>
+      body {
+        background: linear-gradient(
+          #e4fd47,
+          #42edfe,
+          #efb1ff,
+          #fe9eb7,
+          #fffcb7,
+          #fe9eb7,
+          #efb1ff,
+          #42edfe,
+          #e4fd47
+        );
+      }
+      .theme-button {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 6px;
+        font-size: 16px;
+        background: #223e15;
+        color: #f8f761;
+      }
+      .theme-button:hover {
+        background-color: #f63016;
+        color: #1d2723;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      .mario-cover-pic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+      .rainbow-road {
+        border-radius: 10px;
+      }
+      .mount-wario-image {
+        border-radius: 10px;
+      }
+      .bowsers-castle-image {
+        border-radius: 10px;
+      }
+      .peach-speedway {
+        border-radius: 10px;
+      }
+
+      .rainbow-road:hover {
+        transform: scale(2.5);
+        border-radius: 10px;
+      }
+      .mount-wario-image:hover {
+        transform: scale(2.5);
+        border-radius: 10px;
+      }
+      .bowsers-castle-image:hover {
+        transform: scale(2.5);
+        border-radius: 10px;
+      }
+      .peach-speedway:hover {
+        transform: scale(2.5);
+        border-radius: 10px;
+      }
+
+      .image-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+      }
+      .image-container image {
+        width: 100%;
+      }
+      .try-button {
+        background: #fe9eb7;
+        display: block;
+        margin: auto;
+        border: 1px solid;
+        font-size: 24px;
+        padding: 10px 15px;
+        border-radius: 10px;
+      }
+
+      .try-button:hover {
+        background-color: #42edfe;
+        cursor: pointer;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 700px;
+        background-color: azure;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .dark {
+        background: linear-gradient(
+          #180100,
+          #842302,
+          #f80100,
+          #f46807,
+          #fee352,
+          #f46807,
+          #f80100,
+          #842302,
+          #180100
+        );
+
+        color: white;
+      }
+      .dark .container {
+        background: #180100;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>🏎️ My favorite hobby🥇</h1>
+      <img
+        src="https://assets1.ignimgs.com/2019/05/31/mario-kart-8-deluxe---button-1559265583166.jpg"
+        alt=""
+        width="500px"
+        class="mario-cover-pic"
+      />
+      <br />
+      <p>
+        Hit the road with the definitive version of Mario Kart 8 and play
+        anytime, anywhere! Race your friends or battle them in a revised battle
+        mode on new and returning battle courses. Play locally in up to 4-player
+        multiplayer in 1080p while playing in TV Mode. Every track from the Wii
+        U version, including DLC, makes a glorious return. Plus, the Inklings
+        appear as all-new guest characters, along with returning favorites, such
+        as King Boo, Dry Bones, and Bowser Jr.!
+      </p>
+      <br />
+      <div class="image-container">
+        <img
+          src="https://mario.wiki.gallery/images/c/cb/RainbowRoadMK82.png"
+          alt=""
+          class="rainbow-road"
+          width="300px"
+        />
+        <img
+          src="https://static.wikia.nocookie.net/mariokart/images/d/de/MK8_MountWarioCourse.jpg/revision/latest?cb=20150402130231"
+          alt=""
+          class="mount-wario-image"
+          width="300px"
+        />
+        <img
+          src="https://mario.wiki.gallery/images/c/c0/BowersCastle8Gliding.png"
+          alt=""
+          width="300px"
+          class="bowsers-castle-image"
+        />
+        <img
+          src="https://mario.wiki.gallery/images/d/d1/MKT_Paris_Promenade_Scene.jpg"
+          alt=""
+          class="peach-speedway"
+          width="300px"
+          height="169px"
+        />
+      </div>
+      <br />
+      <a href="https://mariokart8.nintendo.com/"
+        ><button class="try-button">Try Mario Kart Today!</button></a
+      >
+    </div>
+  </body>
+  <footer>
+    Coded by <a href="https://github.com/aaschwab">Amanda Schwab</a>
+  </footer>
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+      if (body.classList.contains("dark")) {
+        body.classList.remove("dark");
+      } else {
+        body.classList.add("dark");
+      }
+    }
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+  </script>
+</html>
